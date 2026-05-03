@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  var yearEl = document.getElementById('copyright-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+
   var btn = document.querySelector('.scroll-top');
   if (btn) {
     window.addEventListener('scroll', function () {
