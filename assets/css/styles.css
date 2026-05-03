@@ -1,0 +1,355 @@
+/* Salazar & Associates, CPAs — Static recreation
+   Colors: navy #253D8C, gold #FFC60B, cream #FCF6DB,
+           light blue #C7EAFB, dark gray #414042
+*/
+
+:root {
+  --navy: #253D8C;
+  --gold: #FFC60B;
+  --cream: #FCF6DB;
+  --lightblue: #C7EAFB;
+  --gray: #414042;
+  --muted: #7A7A7A;
+  --white: #ffffff;
+  --max: 1140px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  color: var(--gray);
+  line-height: 1.6;
+  background: #fff;
+}
+
+a { color: var(--navy); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Header / hero ---------- */
+.site-header {
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)),
+              url("https://placehold.co/1920x720/253D8C/FFFFFF?text=Salazar+%26+Associates+CPAs+Office")
+              center/cover no-repeat;
+  color: #fff;
+  padding: 32px 0 28px;
+}
+
+.site-header .brand {
+  text-align: center;
+}
+.site-header .brand h1 {
+  font-family: "Montserrat", "Futura", "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+.site-header .brand .tagline {
+  font-family: "Montserrat", "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 6px 0 0;
+}
+.site-header .brand .gold-rule {
+  width: 15%;
+  min-width: 90px;
+  height: 0;
+  border-top: 1.5px solid var(--gold);
+  margin: 18px auto;
+}
+
+/* Navigation */
+.primary-nav {
+  margin-top: 18px;
+}
+.primary-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 30px;
+  margin: 0;
+  padding: 0;
+}
+.primary-nav a {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  text-transform: none;
+  font-size: 16px;
+  padding: 10px 4px;
+  display: inline-block;
+}
+.primary-nav a:hover,
+.primary-nav li.active a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 10px auto 0;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle { display: block; }
+  .primary-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .primary-nav.open ul { max-height: 600px; padding-top: 10px; }
+  .primary-nav a { padding: 10px 0; }
+}
+
+/* Hours / quick info banner inside header */
+.header-hours {
+  text-align: center;
+  margin: 18px 0 0;
+  font-size: 15px;
+  color: #fff;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 70px 0;
+}
+.section.cream { background: var(--cream); }
+.section.navy { background: var(--navy); color: #fff; }
+.section.navy a { color: var(--lightblue); }
+
+.section h2 {
+  font-family: "Roboto Slab", "Roboto", serif;
+  color: var(--navy);
+  font-weight: 600;
+  font-size: 32px;
+  margin: 0 0 18px;
+}
+.section.navy h2 { color: #fff; }
+
+.section .lead {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.gold-rule-left {
+  width: 80px;
+  border-top: 2px solid var(--gold);
+  margin: 0 0 18px;
+}
+
+/* Two-column row */
+.row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .row-2 { grid-template-columns: 1fr; }
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--navy);
+  color: #fff !important;
+  padding: 12px 24px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  border-radius: 3px;
+  border: 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-transform: uppercase;
+}
+.btn:hover { background: #1b2e6e; text-decoration: none; }
+.btn.gold { background: var(--gold); color: var(--navy) !important; }
+.btn.gold:hover { background: #e6b209; }
+
+/* Office contact callout */
+.contact-callout {
+  background: var(--cream);
+  text-align: center;
+  padding: 40px 20px;
+}
+.contact-callout p { margin: 4px 0; font-size: 16px; }
+.contact-callout a { color: var(--navy); font-weight: 600; }
+
+/* Services grid */
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  align-items: center;
+}
+.service-img {
+  width: 100%;
+  border-radius: 4px;
+  background: #ddd;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+@media (max-width: 768px) { .services { grid-template-columns: 1fr; gap: 30px; } }
+
+/* Map */
+.map-embed iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  display: block;
+}
+
+/* Staff grid */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+@media (max-width: 900px) { .staff-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .staff-grid { grid-template-columns: 1fr; } }
+
+.staff-card {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-align: center;
+  padding-bottom: 18px;
+}
+.staff-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.staff-card h3 {
+  font-family: "Roboto Slab", serif;
+  color: var(--navy);
+  font-size: 18px;
+  margin: 14px 12px 4px;
+}
+.staff-card p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0 12px;
+}
+
+/* IRS resources */
+.irs-block { margin-bottom: 38px; }
+.irs-block h3 {
+  color: var(--navy);
+  font-family: "Roboto Slab", serif;
+  font-size: 22px;
+  margin: 0 0 8px;
+}
+.irs-block .deadline {
+  font-weight: 600;
+  color: var(--navy);
+  margin-top: 18px;
+  margin-bottom: 4px;
+}
+
+/* Contact form */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+@media (max-width: 800px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.contact-info p { margin: 6px 0; }
+.contact-info i { color: var(--navy); width: 22px; margin-right: 8px; }
+
+.contact-form label {
+  display: block;
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--navy);
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font: inherit;
+  margin-top: 6px;
+}
+.contact-form textarea { min-height: 130px; resize: vertical; }
+.contact-form button { margin-top: 20px; }
+
+/* Footer */
+.site-footer {
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px 30px;
+}
+.site-footer h2 {
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  margin: 0 0 14px;
+  font-size: 26px;
+}
+.site-footer a { color: var(--lightblue); }
+.site-footer .gold-rule {
+  width: 80px;
+  border-top: 1.5px solid var(--gold);
+  margin: 24px auto;
+}
+.site-footer .copyright {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+}
+
+/* Scroll to top */
+.scroll-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 44px;
+  height: 44px;
+  background: var(--navy);
+  color: #fff;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  display: none;
+  z-index: 50;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+.scroll-top.visible { display: block; }
+
+/* Utility */
+.text-center { text-align: center; }
+.mb-0 { margin-bottom: 0 !important; }
+ul.plain { list-style: none; padding: 0; }
+ul.plain li { padding: 4px 0; }
