@@ -19,7 +19,8 @@ Static HTML/CSS/JS recreation of [salazarcpas.com](https://salazarcpas.com), mig
 
 ## External dependencies (loaded via CDN)
 - **Font Awesome 6.5** — icons (`fas fa-*`)
-- **Google Fonts** — Roboto, Roboto Slab, Montserrat
+- **Google Fonts** — Montserrat
+- **Adobe Fonts (Typekit)** — Futura PT
 - **Google Maps** — embed iframe for `506 Heartwood Dr, Austin, TX 78745`
 
 ## Brand colors
