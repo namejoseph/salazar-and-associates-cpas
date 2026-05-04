@@ -41,7 +41,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* ---------- Header / hero ---------- */
 .site-header {
   position: relative;
-  background: url("./assets/images/salazarcpas-website-header-photo.jpg")
+  background: url("../images/salazarcpas-website-header-photo.jpg")
               center bottom / cover no-repeat;
   color: #fff;
   padding: 36px 0 0;
