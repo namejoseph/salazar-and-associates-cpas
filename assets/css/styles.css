@@ -232,6 +232,29 @@ h3 {
 .btn.gold { background: var(--gold); color: var(--navy) !important; }
 .btn.gold:hover { background: #e6b209; }
 
+/* Notification banner */
+.notification {
+  background: #939598;
+  padding: 80px 24px;
+  text-align: center;
+}
+.notification p {
+  color: #FCF6DB;
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin: 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 769px) {
+  .notification p { font-size: 28px; }
+}
+
 /* Office contact callout */
 .contact-callout {
   background: #fff;
