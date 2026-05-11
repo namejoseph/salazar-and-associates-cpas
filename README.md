@@ -7,14 +7,18 @@ Static HTML/CSS/JS recreation of [salazarcpas.com](https://salazarcpas.com), mig
 ```
 /
 ├── index.html              # Home
+├── 404.html                # Custom not-found page
 ├── location/index.html     # Location page
 ├── irs-resources/          # IRS Resources page
 ├── staff/index.html        # Staff page
 ├── contact/index.html      # Contact page
+├── robots.txt              # Allows all crawlers, points to sitemap
+├── sitemap.xml             # XML sitemap of all pages
 └── assets/
     ├── css/styles.css      # All styling
-    ├── js/script.js        # Mobile menu + scroll-to-top
-    └── images/             # (drop real photos in here)
+    ├── js/script.js        # Mobile menu + scroll-to-top + dynamic year
+    ├── images/             # Photos
+    └── favicon/            # Favicons + web manifest
 ```
 
 ## External dependencies (loaded via CDN)
@@ -32,17 +36,29 @@ Static HTML/CSS/JS recreation of [salazarcpas.com](https://salazarcpas.com), mig
 | Light blue      | `#C7EAFB` |
 | Dark gray       | `#414042` |
 
-## Replacing placeholder images
+## Images
 
-All photos currently use `https://placehold.co/...` URLs. To swap in real photos:
+All site photos live in `assets/images/`. Current files in use:
+- `salazarcpas-website-header-photo.jpg` — header hero (referenced from CSS)
+- `salazarcpas-website-img-calculator.jpg` — home page services photo
+- `salazarcpas-website-officephoto1.jpg`, `salazarcpas-website-officephoto9.jpg` — location page
+- `salazarcpas-website-staff-{diana,isaac,micaela,jessica,jose,frances}.jpg` — staff page
 
-1. Drop optimized JPG/PNG files into `assets/images/`.
-2. Search the HTML files for `placehold.co` and replace each `src="..."` with `src="/assets/images/your-file.jpg"`.
+## Favicon / web manifest
 
-Filenames you'll likely want to provide:
-- `header-bg.jpg` (used as the dark-overlaid hero in `assets/css/styles.css`)
-- `tax-preparation.jpg` (home page services photo)
-- Staff photos: `diana.jpg`, `isaac.jpg`, `micaela.jpg`, `jessica.jpg`, `jose.jpg`, `frances.jpg`
+Favicon set lives in `assets/favicon/` (generated via [realfavicongenerator.net](https://realfavicongenerator.net)):
+- `favicon.ico`, `favicon.svg`, `favicon-96x96.png`, `apple-touch-icon.png`
+- `web-app-manifest-192x192.png`, `web-app-manifest-512x512.png`
+- `site.webmanifest`
+
+## SEO / metadata
+
+Every page includes:
+- Canonical URL, description, theme-color
+- Open Graph + Twitter Card tags (with `og:image` pointing to the header photo)
+- Favicon set + apple-mobile-web-app-title
+
+The home page (`index.html`) additionally includes a JSON-LD `AccountingService` schema with address, phone, email, and opening hours.
 
 ## Deploying to GitHub Pages
 
@@ -54,7 +70,10 @@ Filenames you'll likely want to provide:
    git push origin main
    ```
 3. Repo → **Settings → Pages** → set **Source** to `Deploy from a branch`, branch `main`, folder `/ (root)`.
-4. (Optional, for custom domain) Create a `CNAME` file in the repo root with the value `salazarcpas.com`, then point your DNS A records at GitHub's IPs and add a `CNAME` for `www`.
+4. (Custom domain) Create a `CNAME` file in the repo root with the value `salazarcpas.com`, then point your DNS A records at GitHub's IPs (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) and add a `CNAME` for `www` pointing to `<username>.github.io`.
+5. Enable **Enforce HTTPS** in the Pages settings once the certificate is issued.
+
+Note: All canonical URLs, OG tags, sitemap, and robots.txt currently reference `https://salazarcpas.com/`. If the live domain changes, do a global search-replace for that string.
 
 ## Local preview
 
