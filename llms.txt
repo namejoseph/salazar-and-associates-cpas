@@ -1,0 +1,39 @@
+# Salazar & Associates, CPAs
+
+> Salazar & Associates, CPAs is a Certified Public Accountant firm located in South Austin, Texas, offering tax preparation, tax planning, and consulting services for individuals and businesses.
+
+## Contact
+
+- Address: 506 Heartwood Drive, Austin, TX 78745
+- Office phone: 512.440.7184
+- Cell phone: 737.231.5323
+- Fax: 512.440.7283
+- Email: salazarcpas@gmail.com
+
+## Office hours
+
+- Monday through Thursday: 9 AM to 5 PM
+- Friday: 9 AM to 4 PM
+
+## Pages
+
+- [Home](https://salazarcpas.com/): Overview, office hours, contact information, and tax preparation services.
+- [Location](https://salazarcpas.com/location/): Office address, photos of the office exterior, and an embedded map.
+- [IRS Resources](https://salazarcpas.com/irs-resources/): Filing deadlines for the current tax year and links to official IRS forms and information.
+- [Staff](https://salazarcpas.com/staff/): Team members, including CPAs, AFSPs, bookkeeper, and receptionist.
+- [Contact](https://salazarcpas.com/contact/): Phone, email, fax, and cell contact details, plus office location and map.
+
+## Services
+
+- Tax preparation (individuals and businesses)
+- Tax planning and consulting
+- Bookkeeping
+
+## Staff
+
+- Jose Salazar, CPA
+- Frances Ortiz-Salazar, CPA
+- Diana E. Hernandez, AFSP
+- Isaac DeOca, AFSP
+- Jessica Salazar, Bookkeeper
+- Micaela Martinez, Receptionist

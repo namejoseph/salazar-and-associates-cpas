@@ -59,25 +59,3 @@ Every page includes:
 - Favicon set + apple-mobile-web-app-title
 
 The home page (`index.html`) additionally includes a JSON-LD `AccountingService` schema with address, phone, email, and opening hours.
-
-## Deploying to GitHub Pages
-
-1. Create a GitHub repo (e.g. `salazarcpas`).
-2. Push these files to the `main` branch:
-   ```bash
-   git add .
-   git commit -m "Initial static site"
-   git push origin main
-   ```
-3. Repo → **Settings → Pages** → set **Source** to `Deploy from a branch`, branch `main`, folder `/ (root)`.
-4. (Custom domain) Create a `CNAME` file in the repo root with the value `salazarcpas.com`, then point your DNS A records at GitHub's IPs (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) and add a `CNAME` for `www` pointing to `<username>.github.io`.
-5. Enable **Enforce HTTPS** in the Pages settings once the certificate is issued.
-
-Note: All canonical URLs, OG tags, sitemap, and robots.txt currently reference `https://salazarcpas.com/`. If the live domain changes, do a global search-replace for that string.
-
-## Local preview
-
-```bash
-python3 -m http.server 8000
-# then open http://localhost:8000
-```
